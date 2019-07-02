@@ -1,0 +1,60 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29001.49
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{0E07F1DB-3908-487C-9001-2B2D7574038C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{41880BB4-FCC7-4B44-BE8B-9DAEEA903584}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraVenta.Models", "CompraVenta.Models\CompraVenta.Models.csproj", "{F017C964-9670-41EA-88F0-428CF89CF47E}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraVenta.Repositories", "CompraVenta.Repositories\CompraVenta.Repositories.csproj", "{801F71F4-1074-4077-A620-2827AEAAC6CD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraVenta.Repositories.Dapper", "CompraVenta.Repositories.Dapper\CompraVenta.Repositories.Dapper.csproj", "{5857C4F8-833B-4B81-9C03-A585B4608F06}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraVenta.UnitOfWork", "CompraVenta.UnitOfWork\CompraVenta.UnitOfWork.csproj", "{90FB5008-D342-4281-83C3-2CDBD2B02FC5}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CompraVenta.Web", "CompraVenta.Web\CompraVenta.Web.csproj", "{836A33A9-F2B2-4D15-B644-5A49F968B107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F017C964-9670-41EA-88F0-428CF89CF47E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F017C964-9670-41EA-88F0-428CF89CF47E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F017C964-9670-41EA-88F0-428CF89CF47E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F017C964-9670-41EA-88F0-428CF89CF47E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{801F71F4-1074-4077-A620-2827AEAAC6CD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{801F71F4-1074-4077-A620-2827AEAAC6CD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{801F71F4-1074-4077-A620-2827AEAAC6CD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{801F71F4-1074-4077-A620-2827AEAAC6CD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5857C4F8-833B-4B81-9C03-A585B4608F06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5857C4F8-833B-4B81-9C03-A585B4608F06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5857C4F8-833B-4B81-9C03-A585B4608F06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5857C4F8-833B-4B81-9C03-A585B4608F06}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90FB5008-D342-4281-83C3-2CDBD2B02FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90FB5008-D342-4281-83C3-2CDBD2B02FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90FB5008-D342-4281-83C3-2CDBD2B02FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90FB5008-D342-4281-83C3-2CDBD2B02FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{836A33A9-F2B2-4D15-B644-5A49F968B107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{836A33A9-F2B2-4D15-B644-5A49F968B107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{836A33A9-F2B2-4D15-B644-5A49F968B107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{836A33A9-F2B2-4D15-B644-5A49F968B107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{F017C964-9670-41EA-88F0-428CF89CF47E} = {0E07F1DB-3908-487C-9001-2B2D7574038C}
+		{801F71F4-1074-4077-A620-2827AEAAC6CD} = {0E07F1DB-3908-487C-9001-2B2D7574038C}
+		{5857C4F8-833B-4B81-9C03-A585B4608F06} = {0E07F1DB-3908-487C-9001-2B2D7574038C}
+		{90FB5008-D342-4281-83C3-2CDBD2B02FC5} = {0E07F1DB-3908-487C-9001-2B2D7574038C}
+		{836A33A9-F2B2-4D15-B644-5A49F968B107} = {41880BB4-FCC7-4B44-BE8B-9DAEEA903584}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {58DB9104-CAFB-468A-955D-ADC7DFD3DEDF}
+	EndGlobalSection
+EndGlobal
