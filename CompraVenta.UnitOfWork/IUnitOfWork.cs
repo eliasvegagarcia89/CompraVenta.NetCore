@@ -1,6 +1,6 @@
-﻿using CompraVenta.Repositories.Northwind;
+﻿using CompraVenta.Dominio.RepositorioInterfaces.Northwind;
 
-namespace CompraVenta.UnitOfWork
+namespace CompraVenta.Datos.IModelo
 {
     public interface IUnitOfWork
     {

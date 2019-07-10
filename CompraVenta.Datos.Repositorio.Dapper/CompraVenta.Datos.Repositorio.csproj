@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" Version="1.50.2" />
+    <PackageReference Include="Dapper.Contrib" Version="1.50.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CompraVenta.Dominio.Entidades\CompraVenta.Dominio.Entidades.csproj" />
+    <ProjectReference Include="..\CompraVenta.Dominio.RepositorioInterfaces\CompraVenta.Dominio.RepositorioInterfaces.csproj" />
+    <ProjectReference Include="..\CompraVenta.UnitOfWork\CompraVenta.Datos.IModelo.csproj" />
+  </ItemGroup>
+
+</Project>
