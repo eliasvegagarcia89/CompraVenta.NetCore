@@ -1,5 +1,6 @@
 import * as React from 'react';
 import {Button, Card, Container,Form, FormControl, InputGroup, Row } from 'react-bootstrap';
+import {LoginService} from 'src/shared/model-service/login';
 
 interface ILogin{
     usuario: string,
@@ -20,6 +21,14 @@ const Login : React.FC = () => {
 
     const isEnabledLogin = () => {
         return login.usuario !== "" && login.password !== ""
+    }
+
+    const loginUser = () => {
+        LoginService.login(login.usuario, login.password)
+            .then(response => {
+                console.log(response);
+            }).catch(error => {
+            });
     }
 
     return (
@@ -59,7 +68,7 @@ const Login : React.FC = () => {
                                     onChange={onInputChange}
                                 />
                             </InputGroup>
-                            <Button size="lg" block={true} disabled={!isEnabledLogin()} >Iniciar sesión</Button>
+                            <Button size="lg" block={true} disabled={!isEnabledLogin()} onClick={()=>loginUser()} >Iniciar sesión</Button>
                         </Form>                        
                     </Card.Body>
                     <Card.Footer>

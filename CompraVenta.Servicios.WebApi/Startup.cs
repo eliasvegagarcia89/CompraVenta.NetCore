@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using System.Linq;
 
 namespace CompraVenta.Web
 {
@@ -22,6 +23,27 @@ namespace CompraVenta.Web
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddSingleton<IUnitOfWork>(new NorthwindUnitOfWork(Configuration.GetConnectionString("Northwind")));
+
+            #region Configurar Cors
+            var valuesSection = Configuration
+                .GetSection("Cors:AllowSpecificOrigins")
+                .GetChildren()
+                .ToList()
+                .Select(x => (x.GetValue<string>("origin"))).ToList();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("_AllowSpecificOrigins",
+                    builder => builder.WithOrigins(valuesSection.ToArray())
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod()
+                                        );
+                options.AddPolicy("_AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod());
+            });
+            #endregion
 
             // configurar servicio de autenticación
             var tokenProvider = new CompraVentaTokenProvider("issuer", "audience", "token-CompraVenta");
@@ -46,6 +68,8 @@ namespace CompraVenta.Web
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseCors("_AllowSpecificOrigins");
 
             app.UseAuthentication();
             app.UseMvc();
